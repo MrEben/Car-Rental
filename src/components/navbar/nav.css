@@ -36,6 +36,27 @@
   gap: 2rem;
 }
 
+.links-container {
+  height: auto !important;
+}
+.links {
+  display: flex;
+}
+.links a {
+  padding: 0;
+  margin: 0 0.5rem;
+  color: var(--clr-primary-6);
+  font-weight: 800;
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  letter-spacing: var(--spacing);
+  padding: 0.5rem 1rem;
+  transition: var(--transition);
+}
+.links a:hover {
+  padding: 0;
+  background: transparent;
+}
 .nav-bar .app-links {
   /* text-transform: capitalize; */
   display: flex;
@@ -56,11 +77,11 @@
   cursor: pointer;
   background: var(--clr-dark-blue);
 }
-.nav-bar .app-links :first-child {
+.nav-bar .app-links div:first-child {
   background: transparent;
   border: none;
 }
-.nav-bar .app-links :first-child:hover {
+.nav-bar .app-links div:first-child:hover {
   background: var(--clr-dark-blue);
 }
 .nav-bar .app-links div a {
@@ -75,24 +96,59 @@
   gap: 0.3rem;
   align-items: center;
 }
+.nav-toggle {
+  font-size: 1rem;
+  color: var(--clr-primary-5);
+  background: transparent;
+  border-color: transparent;
+  transition: var(--transition);
+  cursor: pointer;
+  display: none;
+}
+.nav-toggle:hover {
+  color: var(--clr-black);
+  transform: rotate(45deg);
+}
 /* =====For Small screens====== */
 
 @media screen and (max-width: 600px) {
   .nav-bar {
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 1rem;
+  }
+  .nav-bar .access-links {
+    display: none;
   }
 
-  .nav-bar .app-links {
-    margin-left: 9rem;
+  .links-container {
+    background: var(--clr-dark-blue);
+    width: 100%;
+    flex-direction: column;
+    gap: 2rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    /* left: 2rem; */
+    top: 4rem;
+    padding: 1rem;
+  }
+  .links a:hover {
+    padding-left: 1.5rem;
+  }
+  .links-container {
+    height: 0;
+    overflow: hidden;
+    transition: var(--transition);
   }
   .nav-bar .app-links > div {
-    padding: 0.6rem;
-    letter-spacing: normal;
-    border-radius: 2rem;
-    font-weight: 400;
+    font-size: 1rem;
+    letter-spacing: 1px;
   }
-  .nav-bar .app-links h4 > span {
+  .nav-bar .app-links .log-in {
     display: none;
+  }
+  .nav-bar .app-links .nav-toggle {
+    display: block;
   }
 }

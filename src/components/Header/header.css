@@ -1,12 +1,11 @@
 .header-ui {
   margin-top: 2rem;
   padding: 2rem;
-  /* margin-left: 4rem; */
   display: grid;
   gap: 2rem;
   grid-template-columns: 1fr 1fr;
-  /* height: 90vh; */
   position: relative;
+  overflow: hidden;
 }
 .header-ui .heading {
   margin-left: 4rem;
@@ -43,17 +42,16 @@
   border-radius: 0 0 2rem;
 }
 .header-ui .header-image {
-  display: grid;
-  place-items: center;
-}
-.header-ui .header-image img {
-  width: 70%;
-  right: -15rem;
+  height: 30rem;
   position: absolute;
+  width: 70vw;
   top: 10rem;
+  left: 50%;
+  z-index: -99999;
 }
+
 .header-ui .background-cover {
-  width: 100vw;
+  /* width: 100vw; */
   height: 60vh;
   background: var(--clr-light-blue);
   position: absolute;
@@ -110,10 +108,6 @@
     grid-template-columns: 1fr;
     gap: 0;
   }
-  .header-ui .header-image img {
-    height: 40vh;
-    width: 70vw;
-  }
 }
 @media screen and (max-width: 600px) {
   .header-ui {
@@ -123,15 +117,24 @@
   }
   .header-ui .heading {
     z-index: 99;
+    margin-left: 0;
   }
-  .header-ui .header-image img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    border-radius: 0;
-    z-index: 2;
-    opacity: 45%;
+  .search-ui {
+    margin-left: 2rem;
+    margin-top: 0;
+  }
+  .header-ui {
+    gap: 3rem;
+  }
+  .header-ui .heading h2 {
+    margin-top: 7rem;
+  }
+  .header-ui .header-image {
+    /* position: relative; */
+    height: 40vh;
+    width: 100vw;
+    left: 10rem;
+    top: 15rem;
+    /* width: 40vw; */
   }
 }

@@ -1,9 +1,9 @@
 import React from "react";
-import HeaderImg from "../../assets/carweb.png";
+import HeaderImg from "../../assets/carweb2.png";
 import { AiFillCar } from "react-icons/ai";
 import "./header.css";
 const Header = () => {
-  const subscribe = (e) => {
+  const enter = (e) => {
     e.target.reset();
   };
   return (
@@ -28,7 +28,7 @@ const Header = () => {
           <AiFillCar />
           Cars
         </div>
-        <form onClick={subscribe}>
+        <form onClick={enter}>
           <input
             className="user-location"
             type="text"
@@ -38,7 +38,7 @@ const Header = () => {
           />
           <input className="search-btn btn" type="submit" value="Search" />
         </form>
-        <button className="map-choose btn">Choose on map</button>
+        {/* <button className="map-choose btn">Choose on map</button> */}
       </div>
     </>
   );
