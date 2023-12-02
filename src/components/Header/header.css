@@ -6,6 +6,7 @@
   grid-template-columns: 1fr 1fr;
   position: relative;
   overflow: hidden;
+  height: 70vh;
 }
 .header-ui .heading {
   margin-left: 4rem;
@@ -44,12 +45,14 @@
 .header-ui .header-image {
   height: 30rem;
   position: absolute;
-  width: 70vw;
   top: 10rem;
   left: 50%;
   z-index: -99999;
 }
-
+.header-ui .header-image {
+  width: 70vw;
+  height: 100%;
+}
 .header-ui .background-cover {
   /* width: 100vw; */
   height: 60vh;
@@ -65,7 +68,7 @@
   height: 4rem;
   margin-left: 7rem;
   box-shadow: var(--shadow);
-  margin-top: 6rem;
+  /* margin-top: 6rem; */
   border-radius: var(--radius);
 }
 .search-ui .label {
