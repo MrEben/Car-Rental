@@ -1,6 +1,6 @@
 import Navbar from "./components/navbar/Navbar";
 import Header from "./components/header/Header";
-import Conn from "./components/Conn/conn";
+import Contact from "./components/Contact/Contact";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -11,7 +11,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Header />} />
-          <Route path="/get-started" element={<Conn />} />
+          <Route path="/get-started" element={<Contact />} />
         </Routes>
       </Router>
     </>
