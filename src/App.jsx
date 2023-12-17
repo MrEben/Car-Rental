@@ -1,5 +1,5 @@
 import Navbar from "./components/navbar/Navbar";
-import Header from "./components/header/Header";
+import Header from "./components/Header/Header";
 import Contact from "./components/Contact/Contact";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
