@@ -17,7 +17,7 @@ const Navbar = () => {
                 Busy<span className="danger">Dev</span>
               </h2>
             </Link>
-            <li className="links-container">
+            {/* <li className="links-container">
               <ul className="links">
                 {links.map((link) => {
                   const { id, url, text } = link;
@@ -28,7 +28,7 @@ const Navbar = () => {
                   );
                 })}
               </ul>
-            </li>
+            </li> */}
             <li className="app-links">
               <div>
                 <Link className="log-in" to="">

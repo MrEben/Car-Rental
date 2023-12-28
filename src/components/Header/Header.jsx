@@ -1,47 +1,59 @@
 import React from "react";
-import HeaderImg from "../../assets/carweb2.png";
-import { AiFillCar } from "react-icons/ai";
+import Cars from "../cars/Cars";
 import "./header.css";
+import { AiFillGoogleCircle, AiOutlineGoogle } from "react-icons/ai";
+
 const Header = () => {
-  const enter = (e) => {
-    e.target.reset();
-  };
   return (
     <>
-      <div className="header-ui">
-        <div className="heading">
-          <h2>
-            We have <span>nice</span> cars for rent
-          </h2>
-          <h1>
-            Helping you <span>search, rent and book</span> vehicles easily.
-            Whenever, wherever
-          </h1>
+      <header>
+        <div className="background"></div>
+        <div className="wrapper">
+          <div className="left">
+            <h1>Do you need a vehicle to rent?</h1>
+            <h3>
+              Check out our fleet of vehicles. We have nice cars available which
+              would suit your every need.Look no where else for cars to rent.
+              Discounts available
+            </h3>
+            <div className="buttons">
+              <button className="btn log-in-btn">login</button>
+              <button className="btn">Sign up</button>
+            </div>
+          </div>
+          <form action="">
+            <h1>Login</h1>
+            <div className="input-box">
+              <input type="text" placeholder="Username" required />
+              <i className="bx bxs-user"></i>
+            </div>
+            <div className="input-box">
+              <input type="password" placeholder="Password" required />
+              <i className="bx bxs-lock-alt"></i>
+            </div>
+            <div className="remember-forgot">
+              <label>
+                <input type="checkbox" />
+                Remember Me
+              </label>
+              <a href="#">Forgot Password</a>
+            </div>
+            <button type="submit" className="btn">
+              Login
+            </button>
+            <button type="submit" className="btn google-sign-in">
+              <AiOutlineGoogle /> Sign in with Google
+            </button>
+            <div className="register-link">
+              <p>
+                Dont have an account? <a href="#">Register</a>
+              </p>
+            </div>
+          </form>
         </div>
-        <div className="header-image">
-          <img src={HeaderImg} alt="no image here" />
-        </div>
-        <div className="background-cover"></div>
-      </div>
-      <div className="search-ui">
-        <div className="label">
-          <AiFillCar />
-          Cars
-        </div>
-        <form onClick={enter}>
-          <input
-            className="user-location"
-            type="text"
-            name="address"
-            placeholder="Enter your address"
-            required
-          />
-          <input className="search-btn btn" type="submit" value="Search" />
-        </form>
-        {/* <button className="map-choose btn">Choose on map</button> */}
-      </div>
+      </header>
+      <Cars />
     </>
   );
 };
-
 export default Header;

@@ -1,7 +1,6 @@
 import Navbar from "./components/navbar/Navbar";
 import Header from "./components/Header/Header";
-import Contact from "./components/Contact/Contact";
-
+import Footer from "./components/footer/Footer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -11,8 +10,8 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Header />} />
-          <Route path="/get-started" element={<Contact />} />
         </Routes>
+        <Footer />
       </Router>
     </>
   );
