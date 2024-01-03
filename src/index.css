@@ -8,6 +8,7 @@
   --clr-deep-blue: #0b1d39;
   --clr-baby-blue: #e5c3cf;
   --clr-green: #28a212;
+  --clr-faint-border: rgba(159, 149, 149, 0.562);
   --container-width-lg: 95%;
   --container-width-md: 90%;
   --background: #fcf5ff;
@@ -39,9 +40,9 @@ body {
   overflow-x: hidden;
 }
 
-html {
+/* html {
   scroll-behavior: smooth;
-}
+} */
 
 .container {
   width: var(--container-width-lg);

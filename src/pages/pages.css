@@ -1,0 +1,48 @@
+.car-details {
+  margin: 5rem auto;
+  max-width: 80vw;
+}
+.car-details header {
+  min-height: fit-content;
+}
+.car-details header .path-links,
+.rent-details {
+  display: flex;
+  align-items: center;
+}
+.car-details .rent-details {
+  justify-content: space-between;
+  border-bottom: 0.5px solid var(--clr-faint-border);
+  padding: 1rem 0;
+}
+.car-details .rent-details div:first-child h1 {
+  margin-bottom: 0.5rem;
+}
+.car-details .rent-details div:nth-child(2) {
+  display: flex;
+  gap: 2rem;
+}
+.car-details .rent-details div:nth-child(2) svg {
+  background: var(--clr-light-blue);
+  color: var(--clr-dark-blue);
+  font-size: 2.2rem;
+  padding: 0.4rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.car-details section {
+  display: grid;
+  grid-template-columns: 60% 38%;
+  gap: 2%;
+  margin-top: 1.2rem;
+}
+.car-details section aside {
+  background: rgba(170, 162, 162, 0.15);
+  border: 1px solid var(--clr-faint-border);
+  border-radius: 1rem;
+  padding: 1.4rem;
+}
+.car-details section aside .listing {
+  border-bottom: 1px solid var(--clr-faint-border);
+  padding-bottom: 0.5rem;
+}

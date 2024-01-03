@@ -7,9 +7,11 @@ import {
 } from "react-icons/ai";
 import Img from "../../assets/carweb2.png";
 import { FaCertificate } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import "./index.css";
 const cars = [
   {
+    id: 1,
     img: Img,
     brand: "toyota",
     carName: "Bugatti v47",
@@ -21,6 +23,7 @@ const cars = [
     cost: "GHC500/day",
   },
   {
+    id: 2,
     img: Img,
     carName: "Chervolette",
     brand: "audi",
@@ -32,6 +35,7 @@ const cars = [
     cost: "GHC1000/day",
   },
   {
+    id: 3,
     img: Img,
     carName: "Toyota",
     brand: "honda",
@@ -43,6 +47,7 @@ const cars = [
     cost: "GHC200/day",
   },
   {
+    id: 4,
     img: Img,
     carName: "Bugatti",
     brand: "nissan",
@@ -54,6 +59,7 @@ const cars = [
     cost: "GHC200/day",
   },
   {
+    id: 5,
     img: Img,
     carName: "Bugatti",
     brand: "nissan",
@@ -65,6 +71,7 @@ const cars = [
     cost: "GHC200/day",
   },
   {
+    id: 6,
     img: Img,
     carName: "Bugatti",
     brand: "nissan",
@@ -76,6 +83,7 @@ const cars = [
     cost: "GHC200/day",
   },
   {
+    id: 7,
     img: Img,
     carName: "Bugatti",
     brand: "mazda",
@@ -87,6 +95,7 @@ const cars = [
     cost: "GHC200/day",
   },
   {
+    id: 8,
     img: Img,
     carName: "Bugatti",
     brand: "honda",
@@ -121,7 +130,7 @@ const Cars = () => {
   }
   return (
     <>
-      <section>
+      <section className="cars-section">
         <div className="heading">
           <h1>Explore our Vehicles</h1>
           <div className="underline"></div>
@@ -140,8 +149,9 @@ const Cars = () => {
           ))}
         </div>
         <div className="articles">
-          {cars.map((item, index) => {
+          {cars.slice(0, 3).map((item, index) => {
             const {
+              id,
               img,
               carName,
               ratings,
@@ -153,47 +163,50 @@ const Cars = () => {
             } = item;
             return (
               <article key={index}>
-                <figure>
-                  <img src={img} alt={carName} />
-                </figure>
-                <div className="article-preview">
-                  <h2>{carName}</h2>
-                  {/* write js to determine no of stars shown */}
-                  <div className="ratings">
-                    <AiFillStar />
-                    <AiFillStar />
-                    <AiFillStar />
-                    <AiFillStar />
-                    <AiFillStar />
-                    <h4>5</h4>
+                <Link to={`/cars/${id}`}>
+                  <figure>
+                    <img src={img} alt={carName} />
+                  </figure>
+                  <div className="article-preview">
+                    <h2>{carName}</h2>
+                    {/* write js to determine no of stars shown */}
+                    <div className="ratings">
+                      <AiFillStar />
+                      <AiFillStar />
+                      <AiFillStar />
+                      <AiFillStar />
+                      <AiFillStar />
+                      <h4>5</h4>
+                    </div>
+                    <div className="specs">
+                      <div>
+                        <AiFillSetting />
+                        <small>{mechanic}</small>
+                      </div>
+                      <div>
+                        <AiFillSetting />
+                        <small>{fuel}</small>
+                      </div>
+                      <div>
+                        <AiFillCompass />
+                        <small>{speed}</small>
+                      </div>
+                      <div>
+                        <FaCertificate />
+                        <small>{color}</small>
+                      </div>
+                    </div>
+                    <div className="rate">
+                      <h4>{cost}</h4>
+                      <button className="btn rent-btn">Rent now</button>
+                    </div>
                   </div>
-                  <div className="specs">
-                    <div>
-                      <AiFillSetting />
-                      <small>{mechanic}</small>
-                    </div>
-                    <div>
-                      <AiFillSetting />
-                      <small>{fuel}</small>
-                    </div>
-                    <div>
-                      <AiFillCompass />
-                      <small>{speed}</small>
-                    </div>
-                    <div>
-                      <FaCertificate />
-                      <small>{color}</small>
-                    </div>
-                  </div>
-                  <div className="rate">
-                    <h4>{cost}</h4>
-                    <button className="btn rent-btn">Rent now</button>
-                  </div>
-                </div>
+                </Link>
               </article>
             );
           })}
         </div>
+        <button className="show-more-btn btn">Show more</button>
       </section>
     </>
   );

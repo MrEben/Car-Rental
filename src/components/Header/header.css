@@ -14,19 +14,18 @@ header {
   grid-template-columns: 1fr 1fr;
   gap: 20%;
   min-width: 75%;
-  height: 500px;
+  height: fit-content;
   background: url(../../assets/COPY1.jpg) no-repeat;
-  /* background: red; */
+
   background-size: cover;
   background-position: center;
-  /* backdrop-filter: blur(9px); */
 }
 
 .wrapper .left {
   padding: 2rem;
   color: white;
-  /* text-align: left; */
-  margin-top: 25%;
+
+  padding-top: 25%;
   transform: translateY(-5%);
 }
 .wrapper .left h1 {
@@ -42,12 +41,22 @@ header {
   backdrop-filter: blur(9px);
   color: #fff;
   border-radius: 12px;
-  padding: 30px 40px;
+  padding: 50px 35px;
+  position: relative;
 }
 .wrapper form h1 {
   font-size: 36px;
   text-align: center;
 }
+.wrapper form .close-btn {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  font-size: 1.2rem;
+  display: none;
+  cursor: pointer;
+}
+
 .wrapper .input-box {
   position: relative;
   width: 100%;
@@ -114,6 +123,12 @@ header {
   align-items: center;
   gap: 1rem;
 }
+.wrapper form .log-in-btn {
+  background: var(--clr-light-blue);
+}
+.wrapper form .log-in-btn:hover {
+  background: var(--clr-white);
+}
 .wrapper .register-link {
   font-size: 14.5px;
   text-align: center;
@@ -127,26 +142,76 @@ header {
 .register-link p a:hover {
   text-decoration: underline;
 }
+.save-big {
+  height: 20vh;
+  text-align: center;
+  background: var(--clr-black);
+  color: var(--clr-white);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  justify-content: center;
+}
+.wrapper .sign-up {
+  display: none;
+}
+.save-big h1 {
+  font-weight: 800;
+}
+.save-big span {
+  color: var(--clr-light-blue);
+}
+.login-page,
+.signup-page {
+  height: 100vh;
+}
+.login-page .wrapper,
+.signup-page .wrapper {
+  margin-top: 2rem;
+}
+.signup-page .wrapper form {
+  display: block;
+  /* left: 100%;
+  transform: translateX(-30%); */
+}
 @media screen and (max-width: 780px) {
   header {
     min-height: 80vh;
-    /* padding-top: 3rem; */
   }
   .wrapper {
     grid-template-columns: 1fr;
     width: 90%;
-    top: 45%;
-    /* height: 80%; */
+    top: 53%;
+    padding-top: 2rem;
+    height: 80%;
   }
+  /* login css */
   .wrapper form {
+    width: 100%;
     display: none;
+    margin-top: -10%;
+    background: rgba(46, 38, 38, 0.669);
+  }
+  .wrapper form .close-btn {
+    display: block;
+  }
+  .wrapper .sign-up {
+    /* display: block; */
+    z-index: -999;
+    margin-top: -10%;
+  }
+  .toggleSignUp {
+    display: block;
+  }
+  .toggleWrapperleftOff {
+    /* display: none; */
   }
   .wrapper .left {
-    margin-top: 10%;
-  }
-  .wrapper .left {
+    /* display: none; */
+    padding-top: 10%;
     line-height: 1;
   }
+
   .wrapper .left h3 {
     margin-top: 1rem;
   }
@@ -160,5 +225,21 @@ header {
   }
   .wrapper .left .buttons .log-in-btn:hover {
     background: var(--clr-white);
+  }
+  .save-big {
+    height: 13vh;
+  }
+  .save-big h1 {
+    font-size: 1.7rem;
+  }
+  .save-big h2 {
+    font-size: 1.2rem;
+  }
+  .login-page .wrapper,
+  .signup-page .wrapper {
+    margin-top: 0;
+  }
+  .login-page .wrapper form {
+    display: block;
   }
 }
