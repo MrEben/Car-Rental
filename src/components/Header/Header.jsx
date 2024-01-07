@@ -97,7 +97,6 @@ export const SignUpUI = () => {
             <input type="checkbox" />
             Remember Me
           </label>
-          <a href="#">Forgot Password</a>
         </div>
         <button type="submit" className="log-in-btn btn">
           Sign Up

@@ -52,17 +52,17 @@ section .underline {
 }
 .articles article:hover {
   border: 1px solid var(--clr-midnight-blue);
+  box-shadow: 0 1rem 2rem rgba(136, 138, 149, 0.474);
 }
 .articles article h2 {
   font-size: 1.3rem;
-  color: var(--clr-midnight-blue);
+  color: var(--clr-dark-blue);
   transition: inherit;
 }
 .articles article:hover h2 {
-  color: var(--clr-light-blue);
+  color: var(--clr-midnight-blue);
 }
 .articles figure {
-  /* top: 0; */
   position: relative;
   width: 100%;
   height: 12rem;
@@ -103,15 +103,14 @@ section .underline {
   place-items: center;
 }
 .article-preview .specs div svg {
-  /* border: 1px solid var(--clr-black); */
-  /* padding: 1rem; */
-  /* background: red; */
   background: white;
   padding: 0.23rem;
   font-size: 1.5rem;
+  color: var(--clr-dark-blue);
 }
 .article-preview .specs div small {
   font-size: 0.7rem;
+  text-transform: capitalize;
 }
 .article-preview .rate {
   margin-top: 0.4rem;

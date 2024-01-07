@@ -1,14 +1,18 @@
 .car-details {
   margin: 5rem auto;
-  max-width: 80vw;
+  width: 80vw;
 }
 .car-details header {
   min-height: fit-content;
 }
 .car-details header .path-links,
-.rent-details {
+.car-details header .rent-details {
   display: flex;
   align-items: center;
+}
+.car-details header .path-links h4 {
+  display: flex;
+  justify-content: center;
 }
 .car-details .rent-details {
   justify-content: space-between;
@@ -21,6 +25,13 @@
 .car-details .rent-details div:nth-child(2) {
   display: flex;
   gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+.car-details .rent-details .book-btn {
+  padding: 1rem;
+  font-weight: 800;
+  font-size: 0.8rem;
 }
 .car-details .rent-details div:nth-child(2) svg {
   background: var(--clr-light-blue);
@@ -30,19 +41,125 @@
   border-radius: 10px;
   cursor: pointer;
 }
+.car-details main {
+  width: fit-content;
+}
 .car-details section {
   display: grid;
   grid-template-columns: 60% 38%;
-  gap: 2%;
+  gap: 5%;
   margin-top: 1.2rem;
+  width: fit-content;
+  /* margin: 0 1rem; */
 }
-.car-details section aside {
+.car-specifications {
+  margin-top: 1.8rem;
+}
+.car-details .car-specifications .specs {
+  display: flex;
+  gap: 0.8rem;
+}
+.car-details .car-specifications .specs div {
+  display: flex;
+  justify-content: center;
+  gap: 0.3rem;
+  text-transform: capitalize;
+  color: rgb(65, 58, 58);
+}
+.car-details section aside,
+.car-details section .car-specifications,
+.car-details section .car-about {
   background: rgba(170, 162, 162, 0.15);
   border: 1px solid var(--clr-faint-border);
   border-radius: 1rem;
   padding: 1.4rem;
+  display: grid;
+  gap: 0.7rem;
+  height: fit-content;
+}
+.car-details section .car-about {
+  margin-top: 1.5rem;
+}
+.car-details main .book-btn {
+  display: none;
 }
 .car-details section aside .listing {
   border-bottom: 1px solid var(--clr-faint-border);
   padding-bottom: 0.5rem;
+}
+.car-details section aside .listing h2,
+.car-details section aside .listing span {
+  display: flex;
+}
+.car-details section aside .listing h2 span {
+  font-size: 0.8rem;
+}
+.car-details section aside .listing h2 svg {
+  color: var(--clr-midnight-blue);
+}
+.car-details section aside .brand-location {
+  /* margin-top: 0.4rem; */
+  border-bottom: 1px solid var(--clr-faint-border);
+  padding-bottom: 0.5rem;
+}
+.car-details section aside .brand-payment-methods ul {
+  padding-left: 1rem;
+}
+.car-details .process-heading {
+  text-align: center;
+  margin: 1.5rem 0;
+}
+.booking-steps {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-content: center;
+  gap: 2rem;
+  margin: 4rem 0;
+}
+.booking-steps div {
+  display: grid;
+  gap: 0.5rem;
+  place-content: center;
+}
+.booking-steps img {
+  width: 10rem;
+}
+@media screen and (max-width: 720px) {
+  .car-details .rent-details div:first-child h1 {
+    font-size: 1.7rem;
+  }
+  .car-details {
+    width: fit-content;
+    margin: 5rem 1.5rem;
+  }
+  .car-details section {
+    grid-template-columns: 1fr;
+    gap: 0.7%;
+    /* width: 30vw; */
+  }
+  .car-details .rent-details .book-btn {
+    display: none;
+  }
+  .car-details main .book-btn {
+    display: block;
+    padding: 0.7rem;
+    font-weight: 700;
+    font-size: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+  .car-details .process-heading {
+    text-align: center;
+    margin: 2rem 0 0;
+  }
+  .car-details .booking-steps {
+    grid-template-columns: 1fr;
+    margin: 2rem 0;
+    gap: 3.4rem;
+  }
+  main {
+    width: 80vw;
+  }
 }
