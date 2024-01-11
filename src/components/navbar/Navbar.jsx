@@ -31,7 +31,7 @@ const Navbar = () => {
             </li> */}
             <li className="app-links">
               <div>
-                <Link className="log-in" to="">
+                <Link className="log-in" to="/login">
                   <h4>
                     <span>Log in</span>
                   </h4>

@@ -47,7 +47,7 @@ export const LoginUI = () => {
   return (
     <form className="login" action="">
       <h1>Login</h1>
-      <AiOutlineClose className="close-btn" />
+
       <div className="input-box">
         <input type="text" placeholder="Username" required />
         <i className="bx bxs-user"></i>
@@ -83,7 +83,7 @@ export const SignUpUI = () => {
     <>
       <form className="sign-up" action="">
         <h1>Sign Up</h1>
-        <AiOutlineClose className="close-btn" />
+
         <div className="input-box">
           <input type="text" placeholder="Username" required />
           <i className="bx bxs-user"></i>

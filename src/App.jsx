@@ -4,6 +4,7 @@ import Footer from "./components/footer/Footer";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
 import CarDetails from "./pages/CarDetails";
+// import Appa from "./components/footer/new";
 import {
   BrowserRouter as Router,
   Routes,
@@ -28,6 +29,7 @@ function App() {
           <Route path="/cars/:id" element={<CarDetails />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
+          {/* <Route path="/signups" element={<Appa />} /> */}
         </Routes>
         <Footer />
       </Router>

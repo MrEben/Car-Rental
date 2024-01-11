@@ -1,12 +1,12 @@
 :root {
   --clr-white: #fff;
   --clr-black: #222;
-  --clr-midnight-blue: #9f4170;
-  --clr-blue-gray: #af5888;
-  --clr-light-blue: #f87cb6;
-  --clr-dark-blue: #72275a;
+  --clr-midnight-blue: #6d6cb0;
+  --clr-blue-gray: #9aaeff;
+  --clr-light-blue: #a0b0ef;
+  --clr-dark-blue: #473578;
   --clr-deep-blue: #0b1d39;
-  --clr-baby-blue: #e5c3cf;
+  --clr-baby-blue: #dd96e1f;
   --clr-green: #28a212;
   --clr-faint-border: rgba(159, 149, 149, 0.562);
   --container-width-lg: 95%;
@@ -18,7 +18,11 @@
   --transition: all 400ms ease-in;
   --shadow: 0 1rem 2rem rgba(136, 138, 149, 0.247);
 }
-
+/* #473578	(71,53,120)
+#6d6cb0	(109,108,176)
+#9aaeff	(154,174,255)
+#9b45a1	(155,69,161)
+#dd96e1	(221,150,225) */
 /*
   =============== General Styles ===============
   */

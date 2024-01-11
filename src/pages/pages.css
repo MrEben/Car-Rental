@@ -118,8 +118,15 @@
 }
 .booking-steps div {
   display: grid;
-  gap: 0.5rem;
+  gap: 1rem;
   place-content: center;
+}
+.booking-steps div h3 {
+  font-size: 1.3rem;
+  color: var(--clr-midnight-blue);
+}
+.booking-steps div h4 {
+  text-align: center;
 }
 .booking-steps img {
   width: 10rem;

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./pages.css";
-import { FaCertificate, FaStar } from "react-icons/fa";
+import { FaCertificate, FaStar, FaHeart } from "react-icons/fa";
 import {
   AiOutlineShareAlt,
   AiFillSave,
@@ -8,26 +8,28 @@ import {
   AiFillSetting,
   AiFillCompass,
 } from "react-icons/ai";
-import Img from "../assets/carweb.png";
+import Img from "../assets/carweb2.png";
 import { Link } from "react-router-dom";
 import { cars } from "../components/data";
 import { useParams } from "react-router-dom";
 
-const offers = [
+const process = [
   {
     img: Img,
-    "sub-head": "Sharing Knowledge",
-    description: "Share knowledge to everyone, everywhere",
+    "sub-head": "Choose a car",
+    description: "We have a wide range of vehicles that would suit your desire",
   },
   {
     img: Img,
-    "sub-head": "Reach large audience",
-    description: "Your videos gets seen by a lot of people",
+    "sub-head": "Make reservation",
+    description:
+      "Our dealers are ready to assist you reserve the best choice for you.",
   },
   {
     img: Img,
-    "sub-head": "Earn Money",
-    description: "Teach and earn money from it",
+    "sub-head": "Let's drive",
+    description:
+      ". Check back later to see if reservation is approved.Enjoy your ride!",
   },
 ];
 const CarDetails = () => {
@@ -56,7 +58,7 @@ const CarDetails = () => {
           <div>
             <button className="book-btn btn">Book Now</button>
             <AiOutlineShareAlt />
-            <AiFillSave />
+            <FaHeart />
           </div>
         </div>
       </header>
@@ -136,7 +138,7 @@ const CarDetails = () => {
         <h1>Step by Step Process to Book a Car</h1>
       </div>
       <div className="booking-steps">
-        {offers.map((item, index) => {
+        {process.map((item, index) => {
           return (
             <div key={index}>
               <div className="img">
