@@ -1,10 +1,13 @@
 import Img from "../assets/carweb2.png";
+import img2 from "../assets/mercedes-offer.png";
+import img3 from "../assets/nissan-offer.png";
+import img4 from "../assets/toyota-offer-2.png";
 
 // export const images = [Img1, Img2, Img3, Img4, Img5, Img6, Img7, Img8];
 export const cars = [
   {
     id: 1,
-    img: Img,
+    img: img2,
     brand: "toyota",
     carName: "Bugatti v47",
     ratings: "5 stars",
@@ -16,7 +19,7 @@ export const cars = [
   },
   {
     id: 2,
-    img: Img,
+    img: img3,
     carName: "Chervolette",
     brand: "audi",
     ratings: "5 stars",
@@ -28,7 +31,7 @@ export const cars = [
   },
   {
     id: 3,
-    img: Img,
+    img: img4,
     carName: "Toyota",
     brand: "honda",
     ratings: "5 stars",

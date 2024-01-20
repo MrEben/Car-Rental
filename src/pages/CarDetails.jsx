@@ -64,7 +64,7 @@ const CarDetails = () => {
       </header>
       <section>
         <main>
-          <img src={Img} alt="no img" />
+          <img src={selectedCarDetails.img} alt="no img" />
           <div className="car-specifications">
             <h3>Specifications</h3>
             <div className="specs">
