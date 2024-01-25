@@ -3,7 +3,6 @@ import "./pages.css";
 import { FaCertificate, FaStar, FaHeart } from "react-icons/fa";
 import {
   AiOutlineShareAlt,
-  AiFillSave,
   AiFillCaretRight,
   AiFillSetting,
   AiFillCompass,
