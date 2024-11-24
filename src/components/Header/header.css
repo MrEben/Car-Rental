@@ -1,4 +1,4 @@
-header {
+/* header {
   margin-top: 2rem;
   min-height: 100vh;
   position: relative;
@@ -132,9 +132,142 @@ header {
 }
 .register-link p a:hover {
   text-decoration: underline;
+} */
+
+/* Hero Section Styles */
+.hero {
+  height: 500px;
+  max-width: 1000px;
+  margin: 6rem auto 1rem;
+  position: relative;
+  background: url(../../assets/COPY1.jpg) center/cover;
+  border-radius: 1rem;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border-radius: 1rem;
+}
+
+.hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  /* background: url(../assets/COPY1.jpg); */
+}
+
+.hero-text {
+  max-width: 500px;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* BOOKING FORM */
+.booking-form {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  width: 80%;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-top: 5px;
+}
+
+.rental-type {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.type-button {
+  padding: 8px 16px;
+  border: 1px solid var(--clr-tertiary-color);
+  border-radius: 20px;
+  background: none;
+  cursor: pointer;
+}
+
+.type-button.active {
+  background: var(--clr-tertiary-color);
+  color: white;
+}
+
+.reserve-button {
+  width: 100%;
+  padding: 12px;
+  background: var(--clr-tertiary-color);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* LOGIN FORM */
+.login-form {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 2rem;
+  border-radius: 8px;
+  width: 400px;
+}
+
+.login-form h2 {
+  margin-bottom: 1.5rem;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.form-options {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #6d28d9;
+  color: white;
+}
+
+.google-login {
+  background-color: white !important;
+  color: black !important;
 }
 .save-big {
-  height: 20vh;
+  min-height: 20vh;
   text-align: center;
   background: var(--clr-black);
   color: var(--clr-white);
@@ -164,21 +297,29 @@ header {
   display: block;
 }
 @media screen and (max-width: 780px) {
-  header {
-    min-height: 80vh;
+  .hero {
+    width: 89%;
+    height: 800px;
   }
-  .wrapper {
-    grid-template-columns: 1fr;
-    width: 90%;
-    top: 53%;
-    padding-top: 2rem;
+  .hero-overlay {
+    padding: 0.6rem;
   }
-  /* login css */
-  .wrapper form {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .hero-text {
+    margin-bottom: 2rem;
+    text-align: start;
+  }
+  .booking-form {
     width: 100%;
-    display: none;
-    margin-top: -10%;
-    background: rgba(46, 38, 38, 0.669);
+  }
+  .login-form {
+    width: 100%;
+    max-width: 400px;
   }
 
   .wrapper .sign-up {

@@ -9,6 +9,7 @@
 .car-details header .rent-details {
   display: flex;
   align-items: center;
+  /* align-items: baseline; */
 }
 .car-details header .path-links h4 {
   display: flex;

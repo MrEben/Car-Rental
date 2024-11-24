@@ -3,7 +3,7 @@
   background-color: var(--clr-midnight-blue);
   color: var(--clr-white);
   position: fixed;
-  width: 100vw;
+  width: 100%;
   top: 0;
   z-index: 9999;
 }

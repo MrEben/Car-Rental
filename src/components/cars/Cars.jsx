@@ -1,116 +1,100 @@
 import React, { useState, useEffect } from "react";
-import {
-  AiFillStar,
-  AiFillSetting,
-  AiFillSafetyCertificate,
-  AiFillCompass,
-} from "react-icons/ai";
-import Img from "../../assets/carweb2.png";
-import { FaCertificate } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import Img from "../../assets/nissan-offer.png";
 import "./index.css";
+import { Link } from "react-router-dom";
 import { cars } from "../data";
 
 const Cars = () => {
-  const [categories, setCategories] = useState(["all"]);
-  const [activeBtn, setActiveBtn] = useState("all");
+  const [selectedBrand, setSelectedBrand] = useState("All");
 
-  useEffect(() => {
-    displayButtons();
-  }, []);
+  const carBrands = ["All", "Toyota", "Audi", "Honda", "Nissan", "Mazda"];
 
-  function displayButtons() {
-    const uniqueCategories = cars.reduce(
-      (values, item) => {
-        if (!values.includes(item.brand)) {
-          values.push(item.brand);
-        }
-        return values;
-      },
-      ["all"]
-    );
-
-    setCategories(uniqueCategories);
-  }
+  // const cars = [
+  //   {
+  //     id: 1,
+  //     name: "Mercedes C-Class",
+  //     brand: "Mercedes",
+  //     rating: 4.5,
+  //     features: ["Automatic", "Diesel", "100km/H", "Black"],
+  //     price: 500,
+  //     image: Img,
+  //   },
+  //   {
+  //     id: 2,
+  //     name: "Nissan Maxima",
+  //     brand: "Nissan",
+  //     rating: 4.8,
+  //     features: ["Manual", "Petrol", "100km/H", "Black"],
+  //     price: 1000,
+  //     image: Img,
+  //   },
+  //   {
+  //     id: 3,
+  //     name: "Toyota Camry",
+  //     brand: "Toyota",
+  //     rating: 4.6,
+  //     features: ["Automatic", "Petrol", "200km/H", "Red"],
+  //     price: 200,
+  //     image: Img,
+  //   },
+  // ];
   return (
     <>
+      {/* Car Listing Section */}
       <section className="cars-section">
-        <div className="heading">
-          <h1>Explore our Vehicles</h1>
-          <div className="underline"></div>
-        </div>
-        <div className="buttons">
-          {categories.map((category, index) => (
+        <h2>Explore our Vehicles</h2>
+
+        <div className="brand-filter">
+          {carBrands.map((brand) => (
             <button
-              key={index}
-              className={activeBtn === category ? "active btn bn " : "btn bn"}
-              data-gh={category}
-              // className="btn bn"
-              onClick={() => filterItems(category)}
+              key={brand}
+              className={`brand-button ${
+                selectedBrand === brand ? "active" : ""
+              }`}
+              onClick={() => setSelectedBrand(brand)}
             >
-              {category}
+              {brand}
             </button>
           ))}
         </div>
-        <div className="articles">
-          {cars.slice(0, 3).map((item, index) => {
-            const {
-              id,
-              img,
-              carName,
-              ratings,
-              mechanic,
-              fuel,
-              cost,
-              speed,
-              color,
-            } = item;
-            return (
-              <article key={index}>
-                <Link to={`/cars/${id}`}>
-                  <figure>
-                    <img src={img} alt={carName} />
-                  </figure>
-                  <div className="article-preview">
-                    <h2>{carName}</h2>
-                    {/* write js to determine no of stars shown */}
-                    <div className="ratings">
-                      <AiFillStar />
-                      <AiFillStar />
-                      <AiFillStar />
-                      <AiFillStar />
-                      <AiFillStar />
-                      <h4>5</h4>
-                    </div>
-                    <div className="specs">
-                      <div>
-                        <AiFillSetting />
-                        <small>{mechanic}</small>
-                      </div>
-                      <div>
-                        <AiFillSetting />
-                        <small>{fuel}</small>
-                      </div>
-                      <div>
-                        <AiFillCompass />
-                        <small>{speed}</small>
-                      </div>
-                      <div>
-                        <FaCertificate />
-                        <small>{color}</small>
-                      </div>
-                    </div>
-                    <div className="rate">
-                      <h4>{cost}</h4>
-                      <button className="btn rent-btn">Rent now</button>
-                    </div>
+
+        <div className="car-grid">
+          {cars.map((car) => (
+            <div key={car.id} className="car-card">
+              <Link to={`/cars/${car.id}`}>
+                <img src={car.image} alt={car.name} />
+                <div className="car-details-page">
+                  <h3>{car.name}</h3>
+                  <div className="rating">
+                    {[...Array(5)].map((_, i) => (
+                      <span
+                        key={i}
+                        className={
+                          i < Math.floor(car.rating) ? "star filled" : "star"
+                        }
+                      >
+                        ★
+                      </span>
+                    ))}
                   </div>
-                </Link>
-              </article>
-            );
-          })}
+                  <div className="features">
+                    {car.features.map((feature, index) => (
+                      <span key={index} className="feature-tag">
+                        {feature}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="car-footer">
+                    <span className="price">GHC{car.price}/day</span>
+                    <button className="rent-button">Rent now</button>
+                  </div>
+                </div>
+              </Link>
+            </div>
+          ))}
         </div>
-        <button className="show-more-btn btn">Show more</button>
+
+        <button className="show-more">Show more</button>
       </section>
     </>
   );

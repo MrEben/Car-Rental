@@ -47,7 +47,7 @@ const CarDetails = () => {
           <AiFillCaretRight />
           <h4>Cars</h4>
           <AiFillCaretRight />
-          <h4>{selectedCarDetails.carName}</h4>
+          <h4>{selectedCarDetails.name}</h4>
         </div>
         <div className="rent-details">
           <div>
@@ -63,25 +63,14 @@ const CarDetails = () => {
       </header>
       <section>
         <main>
-          <img src={selectedCarDetails.img} alt="no img" />
+          <img src={selectedCarDetails.image} alt="no img" />
           <div className="car-specifications">
             <h3>Specifications</h3>
             <div className="specs">
-              <div>
-                <AiFillSetting />
-                <small>{selectedCarDetails.mechanic}</small>
-              </div>
-              <div>
-                <AiFillSetting />
-                <small>{selectedCarDetails.fuel}</small>
-              </div>
-              <div>
-                <AiFillCompass />
-                <small>{selectedCarDetails.speed}</small>
-              </div>
-              <div>
-                <FaCertificate />
-                <small>{selectedCarDetails.color}</small>
+              <div className="features">
+                <span className="feature-tag">
+                  {selectedCarDetails.features}
+                </span>
               </div>
             </div>
           </div>

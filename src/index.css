@@ -2,12 +2,16 @@
   --clr-white: #fff;
   --clr-black: #222;
   --clr-midnight-blue: #6d6cb0;
-  --clr-blue-gray: #9aaeff;
+  --clr-blue-gray: #9a71dc;
   --clr-light-blue: #a0b0ef;
   --clr-dark-blue: #473578;
+  --clr-primary-color: #6d28d9;
+  --clr-secondary-color: #f3e8ff;
+
   --clr-deep-blue: #0b1d39;
   --clr-baby-blue: #dd96e1f;
   --clr-green: #28a212;
+  --clr-tertiary-color: #20b2aa;
   --clr-faint-border: rgba(159, 149, 149, 0.562);
   --container-width-lg: 95%;
   --container-width-md: 90%;
