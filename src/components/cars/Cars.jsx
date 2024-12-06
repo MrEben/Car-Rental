@@ -41,7 +41,7 @@ const Cars = () => {
   return (
     <>
       {/* Car Listing Section */}
-      <section className="cars-section">
+      <section className="cars-section" id="cars">
         <h2>Explore our Vehicles</h2>
 
         <div className="brand-filter">
@@ -65,6 +65,7 @@ const Cars = () => {
                 <img src={car.image} alt={car.name} />
                 <div className="car-details-page">
                   <h3>{car.name}</h3>
+                  <h5>{car.company}</h5>
                   <div className="rating">
                     {[...Array(5)].map((_, i) => (
                       <span
