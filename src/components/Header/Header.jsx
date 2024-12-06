@@ -2,17 +2,11 @@ import React, { useState } from "react";
 import Cars from "../cars/Cars";
 import "./header.css";
 import Blogs from "../../pages/Blogs";
+import BookingForm from "./BookingForm";
 import { AiOutlineGoogle, AiOutlineClose } from "react-icons/ai";
 import { Link } from "react-router-dom";
 
 const Header = () => {
-  const [formData, setFormData] = useState({
-    pickupAddress: "",
-    dropoffAddress: "",
-    oneWay: "",
-    pickupDate: "",
-    pickupTime: "",
-  });
   return (
     <>
       {/* Hero Section */}
@@ -28,67 +22,7 @@ const Header = () => {
               </p>
             </div>
             {/* Booking form */}
-            {/* work on booking form to acheive functionality */}
-            <div className="booking-form">
-              <div className="rental-type">
-                <button className="type-button active">Hourly</button>
-                <button className="type-button">Full Rate</button>
-              </div>
-              <div className="form-group">
-                <input
-                  type="text"
-                  className="form-control"
-                  placeholder="Pick-up Address"
-                  value={formData.pickupAddress}
-                  onChange={(e) =>
-                    setFormData({ ...formData, pickupAddress: e.target.value })
-                  }
-                />
-              </div>
-              <div className="form-group">
-                <input
-                  type="text"
-                  className="form-control"
-                  placeholder="Drop-off Address"
-                  value={formData.dropoffAddress}
-                  onChange={(e) =>
-                    setFormData({ ...formData, dropoffAddress: e.target.value })
-                  }
-                />
-              </div>
-              <div className="form-group">
-                <input
-                  type="text"
-                  className="form-control"
-                  placeholder="One Way"
-                  value={formData.oneWay}
-                  onChange={(e) =>
-                    setFormData({ ...formData, oneWay: e.target.value })
-                  }
-                />
-              </div>
-              <div className="form-group">
-                <input
-                  type="date"
-                  className="form-control"
-                  value={formData.pickupDate}
-                  onChange={(e) =>
-                    setFormData({ ...formData, pickupDate: e.target.value })
-                  }
-                />
-              </div>
-              <div className="form-group">
-                <input
-                  type="time"
-                  className="form-control"
-                  value={formData.pickupTime}
-                  onChange={(e) =>
-                    setFormData({ ...formData, pickupTime: e.target.value })
-                  }
-                />
-              </div>
-              <button className="reserve-button">Reserve Now</button>
-            </div>
+            <BookingForm />
           </div>
         </div>
       </section>
