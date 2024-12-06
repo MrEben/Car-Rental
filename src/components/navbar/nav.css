@@ -45,16 +45,17 @@
 .links a {
   padding: 0;
   margin: 0 0.5rem;
-  color: var(--clr-primary-6);
+  color: var(--clr-text-color);
   font-weight: 800;
   font-size: 1.1rem;
   text-transform: capitalize;
   letter-spacing: var(--spacing);
   padding: 0.5rem 1rem;
-  transition: var(--transition);
+  /* transition: var(--transition); */
 }
 .links a:hover {
-  padding: 0;
+  /* padding: 0; */
+  color: var(--clr-dark-blue);
   background: transparent;
 }
 .nav-bar .app-links {

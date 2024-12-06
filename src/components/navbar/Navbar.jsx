@@ -12,10 +12,13 @@ const Navbar = () => {
       <nav>
         <div className="nav-bar">
           <ul>
-            <Link to="/" className="logo">
-              <h2>Renturride</h2>
-            </Link>
-            {/* <li className="links-container">
+            <li>
+              <Link to="/" className="logo">
+                <h2>Renturride</h2>
+              </Link>
+            </li>
+            {/* works on this to acheive click highlight design */}
+            <li className="links-container">
               <ul className="links">
                 {links.map((link) => {
                   const { id, url, text } = link;
@@ -26,7 +29,7 @@ const Navbar = () => {
                   );
                 })}
               </ul>
-            </li> */}
+            </li>
             <li className="app-links">
               <div>
                 <Link className="log-in" to="/login">
